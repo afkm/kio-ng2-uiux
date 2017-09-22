@@ -1,5 +1,5 @@
 {
-	"name": "kio-ng2-image",
+	"name": "kio-ng2-uiux",
 	"version": "0.0.0",
 	"description": "",
 	"main": "./src/uiux.module",
@@ -25,15 +25,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/afkm/kio-ng2-image.git"
+		"url": "git+https://github.com/afkm/kio-ng2-uiux.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/afkm/kio-ng2-image/issues"
+		"url": "https://github.com/afkm/kio-ng2-uiux/issues"
 	},
-	"homepage": "https://github.com/afkm/kio-ng2-image#readme",
+	"homepage": "https://github.com/afkm/kio-ng2-uiux#readme",
 	"peerDependencies": {
 		"@angular/compiler-cli": "^4.2.3",
 		"@angular/common": "^4.2.3",
