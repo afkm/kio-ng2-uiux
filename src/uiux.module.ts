@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core'
+import { RouterModule } from '@angular/router'
+
 import { KioNg2i18nModule } from 'kio-ng2-i18n'
 import { InlineSVGModule } from 'ng-inline-svg'
 
@@ -11,6 +13,9 @@ import { SHARING_CONFIG, Sharings, SharingConfig } from './config'
 
 import { SharingService } from './services/sharing.service'
 
+export { SharingService } from './services/sharing.service'
+export { SHARING_CONFIG, Sharings, SharingConfig } from './config'
+
 import { Ng2PageScrollModule } from 'ng2-page-scroll'
 
 export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopComponent, GRowComponent, GColComponent ]
@@ -19,7 +24,8 @@ export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopC
   imports:[
     InlineSVGModule,
     KioNg2i18nModule,
-    Ng2PageScrollModule
+    Ng2PageScrollModule,
+    RouterModule
   ],
   declarations: [
     ...UIUXComponents

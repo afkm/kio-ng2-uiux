@@ -1,12 +1,12 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core'
-import { DomSanitizer } from '@angular/platform-browser'
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser'
 
 import { SharingService } from '../../services/sharing.service'
 
 @Component({
   selector: 'ui-sharing-dropdown',
   templateUrl: './ui-sharing-dropdown.component.html',
-  styleUrls: ['./ui-sharing-dropdown.component.scss'],
+  styleUrls: ['./ui-sharing-dropdown.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class UiSharingDropdown {
@@ -22,12 +22,12 @@ export class UiSharingDropdown {
   }
 
 
-  sanitize(url:string){
+  sanitize(url:string):SafeUrl{
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
 
-  toggle = function() {
+  toggle() {
     this.isOpen = !this.isOpen
   }
 
