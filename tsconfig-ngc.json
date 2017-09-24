@@ -14,7 +14,7 @@
   },
 
   "files": [
-    "build/module.ts"
+    "build/uiux.module.ts"
   ],
 
   "angularCompilerOptions": {
