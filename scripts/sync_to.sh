@@ -13,7 +13,7 @@ function getTargetRoot () {
 
 TARGET_ROOT="$(getTargetRoot)"
 
-echo "TARGET_ROOT: ${TARGET_ROOT}"
+printf 'Syncing\t\x1b[1;34m%s\x1b[0m to %s\n' "${MODULE_NAME}" "${TARGET_ROOT}"
 
 TARGET_NODE_MODULES="${TARGET_ROOT}/node_modules"
 TARGET_MODULE="${TARGET_NODE_MODULES}/${MODULE_NAME}"
@@ -21,8 +21,20 @@ TARGET_MODULE="${TARGET_NODE_MODULES}/${MODULE_NAME}"
 function syncDir () {
   local dir_name="${1}"
 
+  if [[ -d "${TARGET_MODULE}" ]]; then
+    mkdir -p "${TARGET_MODULE}/${dir_name}"
+  else
+    printf '\x1b[30m%s\x1b[0m\n' "${MODULE_NAME} is not installed"
+    exit 1
+  fi
+
   if [[ -d "${MODULE_ROOT}/${dir_name}" ]]; then
-    rsync -azh --delete "${MODULE_ROOT}/${dirname}/." "${TARGET_MODULE}/${dirname}/."
+    printf 'Syncing\t\x1b[1;34m%s\x1b[0m\n' "${dir_name}"
+
+    rsync -azh --delete "${MODULE_ROOT}/${dir_name}/." "${TARGET_MODULE}/${dir_name}/."
+  else
+    printf '\x1b[2mSkip\t\x1b[1;34m%s\x1b[0m\n' "${dir_name}"
+
   fi
 }
 
