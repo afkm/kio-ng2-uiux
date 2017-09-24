@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "./release/uiux.module",
 	"module": "./release/uiux.module",
+	"typings": "./release/uiux.module.d.ts",
 	"scripts": {
 		"test": "ts-mocha ./src/**/*.spec.ts",
 		"pretest": "npm run build",
