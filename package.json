@@ -27,7 +27,8 @@
 	"files": [
 		"./scss/**/*.scss",
 		"./styles.scss",
-		"./release/**/*"
+		"./release/**/*",
+		"./assets/*"
 	],
 	"repository": {
 		"type": "git",
