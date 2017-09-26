@@ -6,7 +6,7 @@ import { SharingService } from '../../services/sharing.service'
 @Component({
   selector: 'ui-sharing-dropdown',
   templateUrl: './ui-sharing-dropdown.component.html',
-  styleUrls: ['./ui-sharing-dropdown.component.css'],
+  styleUrls: ['./ui-sharing-dropdown.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class UiSharingDropdown {

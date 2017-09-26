@@ -24,6 +24,10 @@
 		"build:release": "NODE_ENV=production npm run build",
 		"build:release:watch": "./scripts/watch.sh build:release"
 	},
+	"files": [
+		"./scss/**/*.scss",
+		"./styles.scss"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/afkm/kio-ng2-uiux.git"
