@@ -25,10 +25,10 @@
 		"build:release:watch": "./scripts/watch.sh build:release"
 	},
 	"files": [
-		"./scss/**/*.scss",
-		"./styles.scss",
-		"./release/**/*",
-		"./assets/*"
+		"scss/*",
+		"styles.scss",
+		"release/*",
+		"assets/*"
 	],
 	"repository": {
 		"type": "git",
