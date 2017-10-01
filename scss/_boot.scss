@@ -48,19 +48,19 @@
     .brand {
         display: block;
 
-        width: rem-calc(172);
-        height: rem-calc(58);
+        width: rem-calc(40);
+        height: rem-calc(90);
 
         text-indent: -1000em;
 
-        background: url(/assets/images/logo-schirn.svg) no-repeat left top transparent;
+        background: url(/assets/images/logo-staedel.svg) no-repeat left top transparent;
         background-size: contain;
 
         line-height: 0;
 
         @media #{$medium-up} {
-            width: rem-calc(372);
-            height: rem-calc(125);
+            width: rem-calc(56.25);
+            height: rem-calc(126.5625);
         }
     }
 
@@ -68,15 +68,12 @@
         margin-top: $row-gutter*4;
         margin-bottom: $row-gutter*2;
 
-        text-transform: uppercase;
-
         h1 {
             color: $color-font-bright;
 
             font-size: rem-calc(35);
-            line-height: 1;
 
-            @extend %default-sans-serif-black;
+            @extend %default-sans-serif-bold;
             @media #{$medium-up} {
                 font-size: rem-calc(70);
             }
@@ -85,9 +82,8 @@
             color: $color-font-bright;
 
             font-size: rem-calc(24);
-            line-height: 1;
 
-            @extend %default-serif;
+            @extend %default-sans-serif;
             @media #{$medium-up} {
                 font-size: rem-calc(30);
             }

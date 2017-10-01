@@ -1,3 +1,16 @@
+
+// Rem-Sizing
+// ----------------------------------------------------------------------------
+
+
+$base-font-size: 16;
+
+$default-size-mobile: 375;
+$default-size-desktop: 1440;
+$max-size-desktop: 1440;
+
+
+
 html {
 	font-size: calc(100vw / #{$default-size-mobile} * #{$base-font-size});
 

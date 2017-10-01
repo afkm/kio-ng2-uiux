@@ -19,10 +19,6 @@ body {
     -moz-font-feature-settings: "lnum";
     -webkit-font-feature-settings: "lnum";
     font-feature-settings: "lnum";
-
-    @media #{$medium-up} {
-        line-height: $global-line-height-desktop;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,12 +27,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 
     @extend %default-sans-serif-bold;
-
-    > b,
-    > strong {
-        font-weight: normal;
-        font-style: normal;
-    }
 }
 
 
@@ -45,15 +35,13 @@ p, li, address, blockquote, dl,
 figcaption {
     margin: 0 0 $row-gutter;
 
-    font-size: rem-calc(20);
+    font-size: rem-calc(22);
     font-weight: normal;
 
-    @media #{$medium-up} {
-        font-size: rem-calc(32);
-    }
-
-    @media #{$large-up} {
-        font-size: rem-calc(24);
+    > b,
+    > strong {
+        font-weight: normal;
+        font-style: normal;
     }
 
     em, i {
@@ -125,19 +113,29 @@ a {
 blockquote{
 
     > p {
-        margin-bottom: 1em;
-
-        text-transform: uppercase;
-
-        color: $color-font-dark;
-
-        font-size: rem-calc(28);
-        line-height: 1.2;
+        font-size: rem-calc(26);
+        line-height: (34/26);
 
         @extend %default-sans-serif-black;
 
         @media #{$medium-up} {
-            font-size: rem-calc(48);
+            font-size: rem-calc(32);
+        }
+        &:before {
+            margin-right: -0.2em;
+
+            // content: "„";
+            // .lang-en & {
+            //     content: "“"
+            // }
+        }
+        &:after {
+            margin-left: -0.2em;
+
+            // content: "“";
+            // .lang-en & {
+            //     content: "”";
+            // }
         }
     }
 
@@ -145,18 +143,12 @@ blockquote{
     cite p {
         display: block;
 
+        text-align: right;
         text-transform: uppercase;
 
-        font-size: rem-calc(17);
-        line-height: 1;
+        font-size: rem-calc(18);
 
-        @extend %default-sans-serif-black;
-
-        @media #{$medium-up} {
-            text-align: right;
-
-            font-size: rem-calc(30);
-        }
+        @extend %default-serif-italic;
     }
 
     cite p {
@@ -170,7 +162,6 @@ blockquote{
         &:before {
             margin-top: rem-calc(4);
 
-            color: $color-font-dark !important;
             border-color: $color-font-dark !important;
 
             @extend %credits-info;
@@ -179,12 +170,8 @@ blockquote{
         .meta {
             padding-top: rem-calc(10);
 
-            font-size: 0.75em;
-
             * {
                 text-transform: none;
-
-                @extend %default-sans-serif;
             }
 
             &:not([hidden]) {
@@ -223,15 +210,14 @@ figcaption {
 
         font-size: rem-calc(14);
 
-        @extend %default-sans-serif;
+        @extend %default-serif-italic;
 
-        @media #{$medium-only} {
-            font-size: rem-calc(19);
+        @media #{$medium-up} {
+            font-size: rem-calc(18);
         }
     }
 
-    &.has-meta,
-    > div.has-meta {
+    &.has-meta {
         cursor: pointer;
 
         &:before {

@@ -54,27 +54,6 @@
     }
 }
 
-%reduced-paddings {
-    padding-top: $row-gutter*1.5;
-    padding-bottom: $row-gutter*1.5;
-
-    @media #{$medium-up} {
-        padding-top: $row-gutter*2.5;
-        padding-bottom: $row-gutter*2.5;
-    }
-}
-
-
-%extended-paddings {
-    padding-top: $row-gutter*4;
-    padding-bottom: $row-gutter*4;
-
-    @media #{$medium-up} {
-        padding-top: $row-gutter*8;
-        padding-bottom: $row-gutter*8;
-    }
-}
-
 %default-margins {
     margin-bottom: $row-gutter*4;
 
@@ -101,6 +80,46 @@
     }
 }
 
+
+%default-border {
+
+    &:before {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        content: "";
+
+        border-top: rem-calc(10) solid $color-campaign-default;
+        border-bottom: rem-calc(4) solid $color-background-bright;
+    }
+}
+
+%contrast-border {
+
+    &:before {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        content: "";
+
+        border-top: rem-calc(10) solid $color-campaign-contrast;
+
+    }
+}
+
+%default-border-reset {
+    &:before {
+        display: none;
+    }
+}
+
+
 %bordered-ui-button {
     border: rem-calc(2) solid $color-background-bright;
 
@@ -120,6 +139,28 @@
     }
 }
 
+
+%rfn-initial {
+    display: block;
+    float: left;
+
+    margin-right: 0.1em;
+    padding: 0 0.2em;
+
+    color: $color-font-bright;
+    background: $color-campaign-default;
+
+    font-size: rem-calc(74);
+    line-height: 0.97;
+
+    @media #{$medium-up} {
+        margin-left: -0.2em;
+
+        font-size: rem-calc(144);
+    }
+}
+
+
 %credits-info {
     float: right;
 
@@ -130,7 +171,6 @@
     content: "i";
     cursor: pointer;
 
-    color: $color-font-bright;
     border: 1px solid $color-background-bright;
 
     font-size: rem-calc(12);
@@ -138,167 +178,4 @@
 
     will-change: opacity;
     @extend %default-sans-serif;
-}
-
-%diamond {
-    position: absolute;
-    top: 50%;
-
-    width: rem-calc(10);
-    height: rem-calc(10);
-    margin-top: rem-calc(-5);
-
-    transform: rotate(-45deg);
-
-    background: $color-background-bright;
-    @media #{$medium-up} {
-        width: rem-calc(24);
-        height: rem-calc(24);
-        margin-top: rem-calc(-12);
-    }
-}
-
-
-%diamond-before {
-    &:before {
-        left: 0;
-
-        content: "";
-
-        @extend %diamond;
-
-    }
-}
-
-%diamond-after {
-    &:after {
-        right: 0;
-
-        content: "";
-
-        @extend %diamond;
-    }
-}
-
-
-%wmr-underlined-headline {
-    position: relative;
-
-    margin: 0;
-    padding-bottom: $row-gutter;
-
-    text-transform: uppercase;
-
-    color: $color-font-bright;
-
-    font-size: rem-calc(36);
-    line-height: 1;
-
-    @extend %default-serif;
-    @media #{$medium-up} {
-        // padding-right: 40%;
-        padding-bottom: $row-gutter*2;
-
-        font-size: rem-calc(72);
-    }
-
-    span,
-    span:after {
-        transition: transform 0.5s ease-out 0s;
-
-        will-change: transform;
-    }
-
-    span {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-
-        display: block;
-
-        width: 100vw;
-        height: rem-calc(2);
-
-        transform: translate(-100%, 0);
-
-        background: $color-background-bright;
-
-        @extend %diamond-after;
-
-        @media #{$medium-up} {
-            height: rem-calc(4);
-        }
-    }
-
-    span:after {
-        transition-duration: 0.5;
-        transform: scale(0) rotate(45deg);
-    }
-
-    .is-in-viewport & {
-        span {
-            transform: none;
-        }
-        span:after {
-            transition-delay: 0.3s;
-            transform: scale(1) rotate(-135deg);
-        }
-    }
-}
-
-%wmr-inital {
-    display: block;
-    float: left;
-
-    margin: 0 rem-calc(20) rem-calc(-20) 0;
-
-    color: $color-font-dark;
-
-    font-size: rem-calc(140);
-    line-height: 1;
-
-    @extend %default-serif;
-    @media #{$medium-up} {
-        margin-bottom: rem-calc(-22);
-
-        font-size: rem-calc(170);
-        line-height: 0.9;
-
-    }
-}
-
-
-%wmr-introtext {
-    margin-bottom: $row-gutter;
-
-    text-transform: uppercase;
-
-    color: $color-font-bright;
-
-    font-size: rem-calc(24);
-    line-height: 1.05;
-
-    @extend %default-sans-serif-black;
-
-    @media #{$medium-up} {
-        margin-bottom: $row-gutter*2;
-
-        font-size: rem-calc(32);
-    }
-}
-
-
-%schirn-minibar {
-    &:before {
-        position: relative;
-
-        display: block;
-
-        width: rem-calc(70);
-        margin-bottom: rem-calc(25);
-
-        content: "";
-
-        border-top: rem-calc(10) solid $color-font-bright;
-    }
 }

@@ -5,60 +5,34 @@ $black: #000000;
 $gray: #878787;
 $red : red;
 
-$crimson: #EB0017; // kampagne rot
-$darkolivegreen: #927641; // kampagne braun
+$purple: #810081; // kamapgne lila
+$gold: #C3A030; // kampagne gold
+$bleublue: #71A3CC; // kampagne bleu
+$darkslategrey: #303132; // antrazit hell
+$darkslateblack: #1B1B1B; // antrazit dark
+$gainsboro: #E0DACE; // background
 
-$khaki: #E7C361;
-$cadetblue: #8BB3B3;
-$firebrick: #B91F23;
-$lightsalmon: #E2895D;
-$seagreen: #006D45;
-
-$floralwhite: #FAF8F0;
 
 // definitions
 
-$color-campaign: $crimson;
-$color-background-bright: $floralwhite;
-$color-background-dark: $black;
-$color-background-default: $darkolivegreen;
+$color-campaign-default: $purple;
+$color-campaign-contrast: $gold;
+$color-campaign-contrast-b: $bleublue;
+$color-secondary: $gold;
 
-$color-background-boot: $color-campaign;
+$color-background-default: $gainsboro;
+$color-background-dark: $darkslateblack;
+$color-background-dark-light: $darkslategrey;
+$color-background-bright: $white;
+$color-background-boot: $color-campaign-default;
 
-$color-marked-default: $color-campaign;
-
-$color-background-footer: $color-background-dark;
-$color-background-sidebar: $color-background-dark;
+$color-marked-default: $color-campaign-contrast;
 
 // typo
 
 $color-font-dark: $black;
-$color-font-bright: $floralwhite;
+$color-font-bright: $white;
 $color-placeholder: $gray;
-$color-link: $color-campaign;
-$color-warning: $color-campaign;
-$color-font-campaign: $color-campaign;
-
-
-// chapters
-
-$chapter-1 : $darkolivegreen;
-$chapter-2 : $khaki;
-$chapter-3 : $cadetblue;
-$chapter-4 : $firebrick;
-$chapter-5 : $lightsalmon;
-$chapter-6 : $seagreen;
-$chapter-7 : $firebrick;
-
-
-$colors-chapters: (
-  0: $color-campaign,
-  1: $color-campaign,
-  2: $darkolivegreen,
-  3: $khaki,
-  4: $cadetblue,
-  5: $firebrick,
-  6: $lightsalmon,
-  7: $seagreen,
-  8: $firebrick
-);
+$color-link: $color-font-dark;
+$color-warning: $red;
+$color-font-campaign: $color-campaign-default;

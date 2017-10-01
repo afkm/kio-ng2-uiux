@@ -1,34 +1,30 @@
 %default-sans-serif {
-  font-family: 'schirn', sans-serif;
+  font-family: 'FreightSans W03 Book', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
-%default-sans-serif-bold {
-    font-family: 'schirn', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
+%default-sans-serif-bold,
 %default-sans-serif-black {
-  font-family: 'schirn', sans-serif;
-  font-weight: 900;
+  font-family: 'Freight Sans W03 Black', sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 
 %default-sans-serif-italic {
-    font-family: 'schirn', sans-serif;
+    font-family:'Freight Sans W03 Book Italic', sans-serif;
     font-weight: normal;
-    font-style: italic; // faux
+    font-style: normal;
 }
 
 %default-serif {
-  font-family: 'belleroselight', serif;
+  font-family: 'Freight Display W03 Boo1197407', serif;
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; // faux non-italic
 }
 
 %default-serif-italic {
-  font-family: 'belleroselight', serif;
+  font-family: 'Freight Display W03 Boo1197407', serif;
   font-weight: normal;
-  font-style: italic; // faux
+  font-style: normal;
 }
