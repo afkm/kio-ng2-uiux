@@ -7,8 +7,6 @@ import { InlineSVGModule } from 'ng-inline-svg'
 import { UiButtonComponent } from './components/ui-button/ui-button.component'
 import { UiSharingDropdown } from './components/ui-sharing-dropdown/ui-sharing-dropdown.component'
 import { UiBackToTopComponent } from './components/ui-back-to-top/ui-back-to-top.component'
-import { GColComponent } from './components/g-col/g-col.component'
-import { GRowComponent } from './components/g-row/g-row.component'
 import { UiDevicecheck } from './components/ui-devicecheck/ui-devicecheck.component'
 import { SHARING_CONFIG, UIUX_CONFIG, UIUXConfig, defaultConfig, Sharings, SharingConfig } from './config'
 
@@ -19,7 +17,7 @@ export { SHARING_CONFIG, Sharings, SharingConfig } from './config'
 
 import { Ng2PageScrollModule } from 'ng2-page-scroll'
 
-export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopComponent, GRowComponent, GColComponent, UiDevicecheck ]
+export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopComponent, UiDevicecheck ]
 
 @NgModule({
   imports:[
