@@ -1,6 +1,6 @@
 {
 	"name": "kio-ng2-uiux",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
 	"main": "./release/uiux.module",
 	"module": "./release/uiux.module",
