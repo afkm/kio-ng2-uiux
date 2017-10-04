@@ -12,15 +12,55 @@
 @import 'basics/animations';
 
 
-// section {
-//
-//     // this is to map colors on a chapter-basis
-//
-//     @for $i from 1 through length($colors-chapter-main) {
-//
-//         &.chapter-#{$i} {
-//
-//             @include color-chapters(map-get($colors-chapter-main, $i), map-get($colors-chapter-sub, $i));
-//         }
-//     }
-// }
+// applying theming
+
+component-router {
+    position: relative;
+
+    // gap after each chapter
+    &[class*="chapter-"]:not(.chapter-0):not(.chapter-8) {
+        display: block;
+
+        padding-bottom: rem-calc(50);
+
+        background-color: $color-background-default;
+
+        @media #{$medium-up} {
+            padding-bottom: rem-calc(100);
+        }
+
+
+        // &:after {
+        //     display: block;
+        //
+        //     width: 100vw;
+        //     height: rem-calc(50);
+        //
+        //     content: "";
+        //
+        //     @media #{$medium-up} {
+        //         height: rem-calc(100);
+        //     }
+        // }
+
+        // this is the element used for targeting the scrolling by the menu
+        > div:last-child {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    @for $i from 0 through 7 {
+
+        &.chapter-#{$i} {
+            background-color: map-get($colors-chapters, $i) !important;
+
+            @include color-chapters(map-get($colors-chapters, $i));
+            @include alter-chapters($i);
+
+            // &:after {
+            //     background-color: map-get($colors-chapters, $i);
+            // }
+        }
+    }
+}
