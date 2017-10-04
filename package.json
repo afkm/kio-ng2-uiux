@@ -19,7 +19,7 @@
 		"ngModule:copy_build": "./scripts/ngModule.sh copy_build",
 		"ngModule:copy": "./scripts/sync_to.sh ../../digit-wmr",
 		"fetchdeps": "./scripts/sync_kio_module.sh component-routing ctn i18n",
-		"build": "npm run ngModule:copy_build && npm run sass:build && npm run ngModule:build && npm run ngModule:copy",
+		"build": "npm run ngModule:copy_build && npm run sass:build && npm run ngModule:build",
 		"build:dev": "npm run fetchdeps && NODE_ENV=production npm run build",
 		"build:release": "NODE_ENV=production npm run build",
 		"build:release:watch": "./scripts/watch.sh build:release"
