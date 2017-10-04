@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { UIUX_CONFIG, UIUXConfig } from '../../config'
+
 
 @Component({
   selector: 'ui-button',
@@ -10,7 +12,9 @@ export class UiButtonComponent implements OnInit {
 
   @Input() icon: string = "default"
 
-  constructor() { }
+  constructor(
+      @Inject(UIUX_CONFIG) public config:UIUXConfig
+    ) { }
 
   ngOnInit() {
   }
