@@ -1,6 +1,8 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, Input, ViewEncapsulation } from '@angular/core';
+import { UIUX_CONFIG } from '../../config';
 var UiButtonComponent = /** @class */ (function () {
-    function UiButtonComponent() {
+    function UiButtonComponent(config) {
+        this.config = config;
         this.icon = "default";
     }
     UiButtonComponent.prototype.ngOnInit = function () {
@@ -14,7 +16,9 @@ var UiButtonComponent = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    UiButtonComponent.ctorParameters = function () { return []; };
+    UiButtonComponent.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: Inject, args: [UIUX_CONFIG,] },] },
+    ]; };
     UiButtonComponent.propDecorators = {
         'icon': [{ type: Input },],
     };

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule, ModuleWithProviders } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { KioNg2i18nModule } from 'kio-ng2-i18n'
@@ -10,7 +10,7 @@ import { UiBackToTopComponent } from './components/ui-back-to-top/ui-back-to-top
 import { GColComponent } from './components/g-col/g-col.component'
 import { GRowComponent } from './components/g-row/g-row.component'
 import { UiDevicecheck } from './components/ui-devicecheck/ui-devicecheck.component'
-import { SHARING_CONFIG, Sharings, SharingConfig } from './config'
+import { SHARING_CONFIG, UIUX_CONFIG, UIUXConfig, defaultConfig, Sharings, SharingConfig } from './config'
 
 import { SharingService } from './services/sharing.service'
 
@@ -36,6 +36,10 @@ export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopC
       provide: SHARING_CONFIG,
       useValue: Sharings
     },
+    {
+      provide: UIUX_CONFIG,
+      useValue: defaultConfig
+    },
     SharingService
   ],
   entryComponents: [
@@ -46,4 +50,18 @@ export let UIUXComponents = [ UiButtonComponent, UiSharingDropdown, UiBackToTopC
     ...UIUXComponents
   ]
 })
-export class KioNg2UIUXModule {}
+export class KioNg2UIUXModule {
+
+  static forRoot ( config:UIUXConfig ):ModuleWithProviders {
+    return {
+      ngModule: KioNg2UIUXModule,
+      providers: [
+        {
+          provide: UIUX_CONFIG,
+          useValue: config
+        }
+      ]
+    }
+  }
+
+}

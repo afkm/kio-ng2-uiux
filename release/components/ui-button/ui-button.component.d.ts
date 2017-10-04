@@ -1,6 +1,8 @@
 import { OnInit } from '@angular/core';
+import { UIUXConfig } from '../../config';
 export declare class UiButtonComponent implements OnInit {
+    config: UIUXConfig;
     icon: string;
-    constructor();
+    constructor(config: UIUXConfig);
     ngOnInit(): void;
 }

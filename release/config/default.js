@@ -40,4 +40,7 @@ export var Sharings = [
         composedUrl: ''
     }
 ];
+export var defaultConfig = {
+    svgAssetsFolder: '/assets/icons'
+};
 //# sourceMappingURL=default.js.map

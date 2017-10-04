@@ -6,3 +6,6 @@ export interface SharingConfig {
     class: string;
     composedUrl: string;
 }
+export interface UIUXConfig {
+    svgAssetsFolder: string;
+}
