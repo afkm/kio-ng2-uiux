@@ -1,4 +1,4 @@
-import { SharingConfig } from './interfaces'
+import { SharingConfig, UIUXConfig } from './interfaces'
 
 export let Sharings:SharingConfig[] = [
   {
@@ -43,3 +43,7 @@ export let Sharings:SharingConfig[] = [
     composedUrl : ''
   }
 ]
+
+export let defaultConfig:UIUXConfig = {
+  svgAssetsFolder: '/assets/icons'
+}
