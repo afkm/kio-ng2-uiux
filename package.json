@@ -2,9 +2,9 @@
 	"name": "kio-ng2-uiux",
 	"version": "0.0.7",
 	"description": "",
-	"main": "./release/uiux.module",
-	"module": "./release/uiux.module",
-	"typings": "./release/uiux.module.d.ts",
+	"main": "./src/uiux.module",
+	"module": "./src/uiux.module",
+	"typings": "./src/uiux.module.ts",
 	"scripts": {
 		"test": "ts-mocha ./src/**/*.spec.ts",
 		"pretest": "npm run build",
@@ -27,7 +27,7 @@
 	"files": [
 		"scss/*",
 		"styles.scss",
-		"release/*",
+		"src/*",
 		"assets/*"
 	],
 	"repository": {
